@@ -1,0 +1,9 @@
+kubectl create -f 1-elastic.yml
+kubectl create -f 2-kibana.yml
+kubectl create -f 3-filebeat.yml
+git clone https://github.com/kubernetes/kube-state-metrics.git 
+kubectl apply -f kube-state-metrics/examples/standard/.
+kubectl create -f 4-metricbeat.yml
+
+Create index pattern filebeat-* metricbeat-*
+
